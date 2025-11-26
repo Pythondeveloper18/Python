@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>instagram.in</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: red(135deg, #5b86e5, #36d1dc);
+        margin: 0;
+    }
+
+    .card {
+        width: 350px;
+        padding: 20px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        text-align: center;
+        color: #fff;
+    }
+
+    input, button {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    button {
+        background: #222;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    button:hover {
+        background: #444;
+    }
+
+    #passwordBox {
+        background: #fff;
+        color: #000;
+        font-weight: bold;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 8px;
+        word-wrap: break-word;
+    }
+
+    .copy-btn {
+        margin-top: 5px;
+        background: #00c853;
+    }
+
+    .toggle-btn {
+        background: #ff9800;
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h2>✨ Password Generator ✨</h2>
+    
+    <input type="number" id="length" placeholder="Enter password length">
+
+    <button onclick="generatePassword()">Generate Password</button>
+
+    <div id="passwordBox"></div>
+
+    <button class="copy-btn" onclick="copyPassword()">Copy Password</button>
+    <button class="toggle-btn" onclick="togglePassword()">Show / Hide</button>
+</div>
+
+<script>
+let visible = true;
+let currentPassword = "";
+
+function generatePassword() {
+    let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
+    let length = document.getElementById("length").value;
+    let password = "";
+
+    for (let i = 0; i < length; i++) {
+        password += chars[Math.floor(Math.random() * chars.length)];
+    }
+
+    currentPassword = password;
+    document.getElementById("passwordBox").innerText = password;
+}
+
+function copyPassword() {
+    navigator.clipboard.writeText(currentPassword);
+    alert("Password copied!");
+}
+
+function togglePassword() {
+    if (!currentPassword) return;
+
+    visible = !visible;
+
+    if (visible) {
+        document.getElementById("passwordBox").innerText = currentPassword;
+    } else {
+        document.getElementById("passwordBox").innerText = "*".repeat(currentPassword.length);
+    }
+}
+</script>
+
+</body>
+</html>
+
+
+
