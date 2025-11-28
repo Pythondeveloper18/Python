@@ -75,7 +75,7 @@ def get_employee_details(employee_name):
         if employee[0].lower() == employee_name.lower():
             return employee
 
-# Example usage
+
 employee_name = input("prabha:")
 print(get_employee_details())
 

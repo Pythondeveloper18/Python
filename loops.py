@@ -159,20 +159,20 @@ while i < 10:
 		
 		
 
-		
-'''
+'''		
+
 row = 7
 
 for i in range(row):
 	for i in range(row -  1 - 1):
-		print("     " , end="     ")
+		print("     " , end="          ")
 		for i in range(2*i + 1):
-			print("*", end='         ')
+			print("*", end='    ')
 '''
 
 
---
 
+'''
 num = float(input('enter the number:'))
 
 
@@ -183,7 +183,36 @@ elif num < 0:
 else:
     property('zero')
 
+'''
 
+
+lst = [1,2,3,4,5,6,7,8]
+
+
+
+for i in lst:
+	if i % 2 == 0:
+		print(i)
+
+
+
+input_list = [1,2,3,4,5,6,100,8,9,10]
+
+even = []
+odd = []
+
+for i in input_list:
+	if i % 2 == 0:
+		even.append(i)
+	else:
+		odd.append(i)
+
+print(even,odd)
+
+
+		
+
+		
 
 
 

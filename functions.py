@@ -8,6 +8,9 @@
 
 #=============================================================================================================
 
+import numbers
+
+
 def sai(x,y,z):
 	op = x + y + z  #--------->called function
 	return  op
@@ -84,12 +87,28 @@ def myfun(**k):
 print(myfun(d=1))
 
 
-         #-----cambo------->
+'''         #-----cambo------->
 
 def aggi(a,b,c,d=0,e=0,*f,**g):
 	print(a,b,c,d,e,f,g)
 
 aggi(1,2,3,4,5,6,6,8,5,9,y=2,X=5)
+'''
+print('=' * 50)
+def even(numbers):
+	op = []
+	for i in numbers:
+		if i % 2 == 0:
+			op.append(i)
+	return op
+		
+		
+s =[1,2,3,45,6,7,8]
+print(even(s))
+
+
+	
+	
 
 
 

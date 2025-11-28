@@ -8,6 +8,9 @@
 # Lc with 2 sections------>
 
 
+from requests import get
+
+
 input_list = [1,2,3,4]
 
 output_list = []
@@ -132,36 +135,24 @@ print([i ** 2  for i in x  if i % 2 == 0])
 print([i ** 2 if i % 2  else i ** 3 for i  in x ])
 
 
+lst = [1,2,4,5,6,7,8,9,10]
+op = []
+  
+for i in lst:
+	if i % 2 == 0:
+		print(i)
+
+
+
+#task 2 : write a  progamm to create a dicitonary with rhe keys from the given data structure and value as length of the elements .
+
+
+citys = ['hyderabd' , 'chennai' , 'goa' , 'vizag' , 'ladak']
+
+op = {}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
+print({i:  len(i) for i in citys })
