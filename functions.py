@@ -95,6 +95,9 @@ def aggi(a,b,c,d=0,e=0,*f,**g):
 aggi(1,2,3,4,5,6,6,8,5,9,y=2,X=5)
 '''
 print('=' * 50)
+
+
+
 def even(numbers):
 	op = []
 	for i in numbers:
@@ -105,6 +108,11 @@ def even(numbers):
 		
 s =[1,2,3,45,6,7,8]
 print(even(s))
+
+
+
+
+
 
 
 	

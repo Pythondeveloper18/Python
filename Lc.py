@@ -156,3 +156,16 @@ op = {}
 
 
 print({i:  len(i) for i in citys })
+
+
+
+
+
+print(100)
+
+
+
+print(200)
+
+
+print({i:  len(i) for i in citys })

@@ -22,8 +22,9 @@ if b > a:
 #------------------------------------
 
 
+
 student = ('ravi','raju','ram')
-name = "raju"
+name = "raju"													
 
 if name in student:
     print("present")
@@ -71,6 +72,10 @@ elif b > c:
 else:
 	print("all are same")
 
+
+
+
+for
 
 
 

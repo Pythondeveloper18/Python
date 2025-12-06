@@ -1,4 +1,7 @@
 #---------------------Genaratators-------------------------#
+from unittest import result
+
+
 print('Genaratators--------->')
 
 
@@ -63,36 +66,33 @@ Output: {'name': 'Nirmala', 'age': '28', 'salary': 25000, 'location': 'Bangalore
 
 
 employee_data = """NAME-AGE-SALARY-LOCATION
+
 Kumar-21-15000-Bangalore
 Sai-21-13000-Hyderabad
 Prabha-25-17000-Chennai
 Nirmala-28-25000-Bangalore
 Hari-35-10000-Hyderabad"""
 
-def get_employee_details(employee_name):
-    for line in employee_data.split('\n')[1:]:
-        employee = line.split('-')
-        if employee[0].lower() == employee_name.lower():
-            return employee
-
-
-employee_name = input("prabha:")
-print(get_employee_details())
-
-
-
-while 1 > 2:
-	print(while)
-
-
-
-ADD = "123"
-print(ADD)
 
 
 
 
 
+#split into lines 
+#first line are keys 
+#store final output
+#skip header line 
 
 
+data = employee_data.split('\n')  # split into linessa
+header = data[0].split('-')
 
+
+result = []
+for i  in data[1:]:
+	value = i.split('-')
+	empty = dict(zip(header,value))
+	result.input(empty)
+
+for emp in result:
+	print(input(empty))

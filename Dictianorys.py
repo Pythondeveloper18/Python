@@ -127,6 +127,11 @@ print(c)
 
 
 
+dic = {10 : 20}
+print(dic)
+
+
+
 
 
 
